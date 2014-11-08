@@ -20,7 +20,7 @@
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
     /* WORK HERE */
     NSString *cheese = @" cheese";
-    if ([cheeseName rangeOfString:cheese].location == NSNotFound) {
+    if ([cheeseName rangeOfString:cheese options:NSCaseInsensitiveSearch].location == NSNotFound) {
         return cheeseName;
     } else {
         NSRange cheeseRange = [cheeseName rangeOfString:cheese options:NSCaseInsensitiveSearch];
